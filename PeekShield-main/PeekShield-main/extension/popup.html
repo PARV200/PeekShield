@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PeekShield Extension</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="brand">
+        <span class="brand-icon">🛡️</span>
+        <div>
+          <h2>PEEKSHIELD</h2>
+          <span class="brand-tag">Smart Web Privacy</span>
+        </div>
+      </div>
+      <div id="connection-status-pill" class="status-pill status-disconnected">
+        <span class="dot"></span>
+        <span id="conn-text">Connecting...</span>
+      </div>
+    </div>
+
+    <!-- Live Risk Card -->
+    <div class="risk-card" id="risk-card">
+      <div class="risk-label">CURRENT PRIVACY RISK</div>
+      <div class="risk-value" id="risk-value">LOW RISK</div>
+      <div class="risk-desc" id="risk-desc">No strangers detected. Browsing is secure.</div>
+    </div>
+
+    <!-- Panic Mode Quick Action Button -->
+    <button id="btn-popup-panic" class="btn-panic-toggle">
+      <span>⚡</span>
+      <span id="btn-panic-text">ACTIVATE PANIC MODE</span>
+    </button>
+
+    <!-- Sensitive Category Toggles -->
+    <div class="section-title">Protected Categories</div>
+    <div class="toggle-list">
+      <label class="toggle-item">
+        <span>💳 Credit / Debit Cards</span>
+        <input type="checkbox" id="cat-cards" checked />
+      </label>
+      <label class="toggle-item">
+        <span>🔑 Passwords & API Tokens</span>
+        <input type="checkbox" id="cat-passwords" checked />
+      </label>
+      <label class="toggle-item">
+        <span>✉️ Email Addresses</span>
+        <input type="checkbox" id="cat-emails" checked />
+      </label>
+      <label class="toggle-item">
+        <span>📱 Phone Numbers</span>
+        <input type="checkbox" id="cat-phones" checked />
+      </label>
+      <label class="toggle-item">
+        <span>🔢 OTP & 2FA Codes</span>
+        <input type="checkbox" id="cat-otps" checked />
+      </label>
+      <label class="toggle-item">
+        <span>💬 Private Chat Content</span>
+        <input type="checkbox" id="cat-chat" checked />
+      </label>
+    </div>
+
+    <div class="popup-footer">
+      <span>Local AI Screen Protection</span>
+      <span>v1.0.0</span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+
